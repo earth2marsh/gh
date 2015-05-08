@@ -1192,6 +1192,26 @@ Apigee.APIModel.Editor = function() {
                 bodyPayload = window.apiModelEditor.getRequestPayLoad();
             }
         }
+// from https://github.com/swagger-api/swagger-js/blob/f0cb7a76d2531876dff9be9fd0a963889b85e7b3/lib/types/operation.js#L768
+
+				var results = [];
+
+					results.push('-X ' + methodVerb.toUpperCase());
+
+					if (headersList) {
+						var key;
+
+						for (key in headersList) {
+							results.push('--header "' + key + ': ' + headersList[key] + '"');
+						}
+					}
+
+					if (bodyPayload) {
+						results.push('-d "' + bodyPayload.replace(/"/g, '\\"') + '"');
+					}
+
+				  Apigee.curl = 'curl ' + (results.join(' ')) + ' "' + urlToTest + '"';
+        
         self.makeAJAXCall({"url":urlToTest,"type":methodVerb,"data" : bodyPayload, "callback":self.renderRequest,"headers":headersList, "contentType":contentTypeValue,"processData":processDataValue});
     };
     /**
@@ -2262,3 +2282,4 @@ Apigee.APIModel.SwaggerModelProperty = function(name, obj) {
 };
 Apigee.APIModel.sampleModels = {};
 Apigee.lastResponse = {};
+Apigee.curl = "";
