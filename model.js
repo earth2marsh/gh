@@ -1192,7 +1192,7 @@ Apigee.APIModel.Editor = function() {
                 bodyPayload = window.apiModelEditor.getRequestPayLoad();
             }
         }
-// from https://github.com/swagger-api/swagger-js/blob/f0cb7a76d2531876dff9be9fd0a963889b85e7b3/lib/types/operation.js#L768
+// adapted from https://github.com/swagger-api/swagger-js/blob/f0cb7a76d2531876dff9be9fd0a963889b85e7b3/lib/types/operation.js#L768
 
 				var results = [];
 
@@ -1210,9 +1210,9 @@ Apigee.APIModel.Editor = function() {
 						results.push('-d "' + bodyPayload.replace(/"/g, '\\"') + '"');
 					}
 
-				  Apigee.curl = 'curl ' + (results.join(' ')) + ' "' + urlToTest + '"';
+				  Apigee.curl = 'curl ' + (results.join(' ')) + ' "' + targetUrl + '"';
         
-        self.makeAJAXCall({"url":urlToTest,"type":methodVerb,"data" : bodyPayload, "callback":self.renderRequest,"headers":headersList, "contentType":contentTypeValue,"processData":processDataValue});
+        self.makeAJAXCall({"url":tmpUrl,"type":methodVerb,"data" : bodyPayload, "callback":self.renderRequest,"headers":headersList, "contentType":contentTypeValue,"processData":processDataValue});
     };
     /**
      * Success/Error callback method of a send request proxy API call.
