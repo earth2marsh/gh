@@ -1212,7 +1212,7 @@ Apigee.APIModel.Editor = function() {
 
 				  Apigee.curl = 'curl ' + (results.join(' ')) + ' "' + targetUrl + '"';
         
-        self.makeAJAXCall({"url":tmpUrl,"type":methodVerb,"data" : bodyPayload, "callback":self.renderRequest,"headers":headersList, "contentType":contentTypeValue,"processData":processDataValue});
+        self.makeAJAXCall({"url":urlToTest,"type":methodVerb,"data" : bodyPayload, "callback":self.renderRequest,"headers":headersList, "contentType":contentTypeValue,"processData":processDataValue});
     };
     /**
      * Success/Error callback method of a send request proxy API call.
