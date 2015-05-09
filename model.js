@@ -1332,7 +1332,7 @@ Apigee.APIModel.Editor = function() {
         }
         requestContainerString += "</dl>";
         requestContainerElement.html(requestContainerString);
-        requestContainerElement.html("<pre>"+Apigee.curl+"</pre>");
+        curlContainerElement.html("<pre>"+Apigee.curl+"</pre>");
         // Resquest content construction.
         bodyContent = unescape(data.requestContent);
         bodyContent = bodyContent.replace(/[^\x00-\x7F]/g, "###");
