@@ -785,20 +785,20 @@ Apigee.APIModel.Editor = function() {
             jQuery("#link_response_tab").removeClass('selected');
             jQuery("#request_response_container .response").hide();
             jQuery("#link_curl_tab").removeClass('selected');
-            jQuery("#curl_container .curl").hide();
+            jQuery("#request_response_container .curl").hide();
             jQuery("#request_response_container .request").show();
         } else if ($currentElement.attr('id') ==  'link_response_tab') {
             jQuery("#link_request_tab").removeClass('selected');
             jQuery("#request_response_container .request").hide();
             jQuery("#link_curl_tab").removeClass('selected');
-            jQuery("#curl_container .curl").hide();
+            jQuery("#request_response_container .curl").hide();
             jQuery("#request_response_container .response").show();
         } else {
             jQuery("#link_request_tab").removeClass('selected');
             jQuery("#request_response_container .request").hide();
             jQuery("#link_response_tab").removeClass('selected');
             jQuery("#request_response_container .response").hide();
-            jQuery("#curl_container .curl").show();
+            jQuery("#request_response_container .curl").show();
         }
         $currentElement.addClass('selected');
     };
