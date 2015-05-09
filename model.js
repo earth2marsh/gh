@@ -1199,10 +1199,12 @@ Apigee.APIModel.Editor = function() {
 					results.push('-X ' + methodVerb.toUpperCase());
 
 					if (headersList) {
-						var key;
+						for (var i=0,l=headersList.length; i<l; i++) {
+							var key;
 
-						for (key in headersList) {
-							results.push('--header "' + key + ': ' + headersList[key] + '"');
+							for (key in headersList[i]) {
+								results.push('--header "' + key + ': ' + headersList[i][key] + '"');
+							}
 						}
 					}
 
