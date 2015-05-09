@@ -784,13 +784,13 @@ Apigee.APIModel.Editor = function() {
         if ($currentElement.attr('id') ==  'link_request_tab') { // Show the request
             jQuery("#link_response_tab").removeClass('selected');
             jQuery("#request_response_container .response").hide();
-            jQuery("#curl_tab").removeClass('selected');
+            jQuery("#link_curl_tab").removeClass('selected');
             jQuery("#curl_container .curl").hide();
             jQuery("#request_response_container .request").show();
         } else if ($currentElement.attr('id') ==  'link_response_tab') {
             jQuery("#link_request_tab").removeClass('selected');
             jQuery("#request_response_container .request").hide();
-            jQuery("#curl_tab").removeClass('selected');
+            jQuery("#link_curl_tab").removeClass('selected');
             jQuery("#curl_container .curl").hide();
             jQuery("#request_response_container .response").show();
         } else {
