@@ -906,6 +906,7 @@ Apigee.APIModel.Editor = function() {
         };
         jQuery("#request_response_container .response").html("<p>Make a request and see the response.</p>");
         jQuery("#request_response_container .request").html("<p>Make a request and see the response.</p>");
+        jQuery("#request_response_container .curl").html("<p>Get an equivalent cURL command for the request.</p>").hide();
         rawCode = "";
         bodyContent = false;
     };
