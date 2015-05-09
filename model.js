@@ -1200,11 +1200,7 @@ Apigee.APIModel.Editor = function() {
 
 					if (headersList) {
 						for (var i=0,l=headersList.length; i<l; i++) {
-							var key;
-
-							for (key in headersList[i]) {
-								results.push('--header "' + key + ': ' + headersList[i][key] + '"');
-							}
+							results.push('--header "' + headersList[i].name + ': ' + headersList[i].value + '"');
 						}
 					}
 
