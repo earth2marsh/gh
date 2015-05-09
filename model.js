@@ -1230,6 +1230,7 @@ Apigee.APIModel.Editor = function() {
     this.renderRequest = function(data) {
         var responseContainerElement = jQuery("[data-role='response-container']");
         var requestContainerElement = jQuery("[data-role='request-container']");
+        var curlContainerElement = jQuery("[data-role='curl-container']");
         if (data == "" || data == null) {
             requestContainerElement.html("<strong> An internal error has occurred. Please retry your request.</strong>");
             responseContainerElement.html("<strong> An internal error has occurred. Please retry your request.</strong>");
@@ -1331,6 +1332,7 @@ Apigee.APIModel.Editor = function() {
         }
         requestContainerString += "</dl>";
         requestContainerElement.html(requestContainerString);
+        requestContainerElement.html("<pre>"+Apigee.curl+"</pre>");
         // Resquest content construction.
         bodyContent = unescape(data.requestContent);
         bodyContent = bodyContent.replace(/[^\x00-\x7F]/g, "###");
