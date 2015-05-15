@@ -840,7 +840,7 @@ Apigee.APIModel.Editor = function() {
             }
             self.closeAuthModal();
             // Make an AJAX call to retrieve an auth URL.
-            self.makeAJAXCall({"url":oauth2Url+"/authschemes/oauth2webserverflow/authUrl",dataType:"json", "callback":self.renderCallbackURL, "errorCallback" :self.handleOAuth2Failure});
+            self.makeAJAXCall({"url":oauth2Url+"/templateauths/"+secName+"/authUrl",dataType:"json", "callback":self.renderCallbackURL, "errorCallback" :self.handleOAuth2Failure});
         } else if (parentClass.attr('data-role') == 'custom_token_modal') {
             customTokenObject = {};
             customTokenObject.tokenType = (jQuery("[data-role='custom_token_modal']").find("[data-role='header']").attr('checked') == "checked") ? "header" : "query";
