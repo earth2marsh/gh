@@ -833,10 +833,10 @@ Apigee.APIModel.Editor = function() {
             var oauth2Url = window.location.href;
             oauth2Url = windowLocation.split("/resources/")[0];
             if (typeof Drupal != "undefined" && typeof Drupal.settings != "undefined") {
-                oauth2Url = Drupal.settings.devconnect_docgen.apiModelBaseUrl + "/v1/o/" + Apigee.APIModel.organizationName + "/apimodels/"+ Apigee.APIModel.apiName+"/revisions/"+ Apigee.APIModel.revisionNumber;
+                oauth2Url = Drupal.settings.devconnect_docgen.apiModelBaseUrl + "/v1/o/" + Apigee.APIModel.organizationName + "/apimodels/"+ Apigee.APIModel.apiName;
             }
             if (Apigee.APIModel.apiModelBaseUrl) {
-                oauth2Url = Apigee.APIModel.apiModelBaseUrl + "/v1/o/" + Apigee.APIModel.organizationName + "/apimodels/"+ Apigee.APIModel.apiName+"/revisions/"+ Apigee.APIModel.revisionNumber;
+                oauth2Url = Apigee.APIModel.apiModelBaseUrl + "/v1/o/" + Apigee.APIModel.organizationName + "/apimodels/"+ Apigee.APIModel.apiName;
             }
             self.closeAuthModal();
             // Make an AJAX call to retrieve an auth URL.
