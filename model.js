@@ -587,6 +587,7 @@ Apigee.APIModel.Editor = function() {
             var oauth2AuthUrlPart1 = data.authUrl.split("redirect_uri=")[0];
             var oauth2AuthUrlPart2 = data.authUrl.split("redirect_uri=")[1];
             oauth2AuthUrlPart2 = oauth2AuthUrlPart1+"redirect_uri="+encodeURIComponent(Drupal.settings.devconnect_docgen.oauth2AuthUrl+"?org="+Apigee.APIModel.organizationName+"&api="+Apigee.APIModel.apiName) + "&client_id=" + oauth2AuthUrlPart2.split("client_id=")[1];
+            console.log(oauth2AuthUrlPart2);
             window.open(oauth2AuthUrlPart2, "oauth2Window", "resizable=yes,scrollbars=yes,status=1,toolbar=1,height=500,width=500");
         } else {
             window.open(data.authUrl, "oauth2Window", "resizable=yes,scrollbars=yes,status=1,toolbar=1,height=500,width=500");
