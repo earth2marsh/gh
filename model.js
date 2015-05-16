@@ -590,6 +590,7 @@ Apigee.APIModel.Editor = function() {
             console.log(oauth2AuthUrlPart2);
             window.open(oauth2AuthUrlPart2, "oauth2Window", "resizable=yes,scrollbars=yes,status=1,toolbar=1,height=500,width=500");
         } else {
+        		console.log(oauth2AuthUrlPart2);
             window.open(data.authUrl, "oauth2Window", "resizable=yes,scrollbars=yes,status=1,toolbar=1,height=500,width=500");
         }
     };
