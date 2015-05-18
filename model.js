@@ -590,8 +590,8 @@ Apigee.APIModel.Editor = function() {
             window.open(oauth2AuthUrlPart2, "oauth2Window", "resizable=yes,scrollbars=yes,status=1,toolbar=1,height=500,width=500");
         } else {
         		console.log(data.authUrl);
-        		data.authUrl = "https://demo-test.apigee.net/github-oauth/login/oauth/authorize?response_type=code&redirect_uri=https%3A%2F%2Fapi.e2e.apigee.net%2Fv1%2Fo%2Fsmartdocsga%2Fapimodels%2Fgithub%2Ftemplateauths%2Foauth2webserver%2Fcallback&client_id=f25178d73cfbfc2a180b";
-        		//data.authUrl = "https://github.com/login/oauth/authorize?response_type=code&redirect_uri=https%3A%2F%2Fapi.e2e.apigee.net%2Fv1%2Fo%2Fsmartdocsga%2Fapimodels%2Fgithub%2Ftemplateauths%2Foauth2webserver%2Fcallback&client_id=f25178d73cfbfc2a180b";
+        		// may not work b/c of 302 redirect! data.authUrl = "https://demo-test.apigee.net/github-oauth/login/oauth/authorize?response_type=code&redirect_uri=https%3A%2F%2Fapi.e2e.apigee.net%2Fv1%2Fo%2Fsmartdocsga%2Fapimodels%2Fgithub%2Ftemplateauths%2Foauth2webserver%2Fcallback&client_id=f25178d73cfbfc2a180b";
+        		// hardcoded b/c of mismatch btw callback and redirect data.authUrl = "https://github.com/login/oauth/authorize?response_type=code&redirect_uri=https%3A%2F%2Fapi.e2e.apigee.net%2Fv1%2Fo%2Fsmartdocsga%2Fapimodels%2Fgithub%2Ftemplateauths%2Foauth2webserver%2Fcallback&client_id=f25178d73cfbfc2a180b";
             window.open(data.authUrl, "oauth2Window", "resizable=yes,scrollbars=yes,status=1,toolbar=1,height=500,width=500");
         }
     };
