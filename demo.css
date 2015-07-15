@@ -1,3 +1,8 @@
+/* 
+* Proof of concept demo CSS file.
+* NOTE: Injecting an external CSS file is not a recommended approach, as it is possible to self-inflict great damage.
+* CSS injection is most certainly not a supported feature. Here be dragons!
+*/
 .navbar-inner{background-color: white;font-size:14px}
 .navbar .nav>li>a {color:#666!important;text-shadow:none!important;}
 .navbar .nav .active>a, .navbar .nav .active>a:hover{background-color: #f5f5f5; color:#4397d2!important;text-shadow:none;text-shadow:none;;
